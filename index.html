@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Creations with Chef Lisa</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo"><img src="./images/logo.png" height="80px" style="padding-top: 5px;" alt=""></a>
+            <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="/index.html#about">About</a></li>
+                <li><a href="/index.html#class-schedule">Classes</a></li>
+                <li><a href="/index.html#recipes">Recipes</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="flex-container">
+            <div class="flex-item-right">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <div class="overlay"></div>
+                            <img src="./images/Chef 4.jpeg" alt="Chef Lisa in action 1">
+                            <div class="carousel-caption">
+                                <h2>Master the Art of Cooking</h2>
+                                <p>Join Chef Lisa and unlock your culinary potential.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="overlay"></div>
+                            <img src="./images/Chef 2.jpeg" alt="Chef Lisa in action 2">
+                            <div class="carousel-caption">
+                                <h2>Cook Like a Pro</h2>
+                                <p>Learn tips and tricks from a professional chef.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="overlay"></div>
+                            <div class="overlay"></div>
+                            <img src="./images/Chef 3.jpeg" alt="Chef Lisa in action 3">
+                            <div class="carousel-caption">
+                                <h2>Transform Your Skills</h2>
+                                <p>Take your cooking to the next level with Chef Lisa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Meet Chef Lisa</h2>
+                <p>Chef Lisa is a culinary artist with over 15 years of experience in fine dining. She has worked in
+                    renowned restaurants around the world, honing her skills in various cuisines. Chef Lisa's journey
+                    started with a passion for food, which later turned into a career. She is committed to sharing her
+                    knowledge and expertise with aspiring chefs through hands-on classes and workshops.</p>
+                <p>Throughout her career, Chef Lisa has received numerous accolades, including "Best Chef of the Year"
+                    and recognition in top culinary magazines. Her teaching philosophy centers on inspiring creativity
+                    and instilling confidence in her students, helping them find their unique culinary voice.</p>
+                <button class="cta">Learn More</button>
+            </div>
+
+            <div class="about-image">
+                <img src="./images/chef.png" alt="Chef Lisa in the kitchen">
+            </div>
+        </div>
+    </section>
+
+    <section id="class-schedule">
+        <div class="schedule-container">
+            <h2>Find Your Perfect Class</h2>
+            <p>Discover the Perfect Culinary Class to Sharpen Your Skills and Delight Your Taste Buds</p>
+            <div class="filter-options">
+                <label for="skill-level">Filter by Skill Level:</label>
+                <select id="skill-level" name="skill-level">
+                    <option value="all">All Levels</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+
+            <table class="class-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Class Description</th>
+                        <th>Skill Level</th>
+                    </tr>
+                </thead>
+                <tbody id="class-schedule-list">
+                    <tr class="beginner">
+                        <td>Jan 5, 2025</td>
+                        <td>10:00 AM</td>
+                        <td>Introduction to Cooking Basics</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr class="intermediate">
+                        <td>Jan 7, 2025</td>
+                        <td>2:00 PM</td>
+                        <td>Advanced Knife Skills</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr class="advanced">
+                        <td>Jan 10, 2025</td>
+                        <td>11:00 AM</td>
+                        <td>Mastering French Pastries</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr class="beginner">
+                        <td>Jan 12, 2025</td>
+                        <td>1:00 PM</td>
+                        <td>Basic Pasta Making</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr class="intermediate">
+                        <td>Jan 14, 2025</td>
+                        <td>3:00 PM</td>
+                        <td>Soups and Sauces 101</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr class="advanced">
+                        <td>Jan 17, 2025</td>
+                        <td>9:00 AM</td>
+                        <td>Art of Sushi Making</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr class="beginner">
+                        <td>Jan 20, 2025</td>
+                        <td>10:30 AM</td>
+                        <td>Healthy Baking for Beginners</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr class="intermediate">
+                        <td>Jan 22, 2025</td>
+                        <td>2:30 PM</td>
+                        <td>Grilling Techniques for Meat and Vegetables</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr class="advanced">
+                        <td>Jan 25, 2025</td>
+                        <td>4:00 PM</td>
+                        <td>Gourmet Desserts: Tarts and Mousse</td>
+                        <td>Advanced</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <button href="#reservation-form" class="cta">Reserve Your Spot Today!</button>
+
+        </div>
+    </section>
+
+    <section id="recipes">
+        <div class="recipe-container">
+            <h2>Sneak Peek at Our Recipes</h2>
+            <p>Discover the Flavors Behind the Magic</p>
+            <div class="card-carousel-container">
+                <div class="card-carousel">
+                    <div class="card-carousel-item">
+                        <img src="./images/Garlic Butter Lobster Tail.png" alt="Signature Dish 1">
+                        <div class="recipe-description">
+                            <h3>Garlic Butter Lobster Tail</h3>
+                            <p>This delicious recipe is a perfect introduction to the art of fine cooking. Learn how to
+                                master
+                                flavors and techniques in just a few steps.</p>
+                            <a href="./recipes/signature-dish-1/index.html" class="cta-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-carousel-item">
+                        <img src="./images/Classic Margherita Pizza (Italian).png" alt="Signature Dish 2">
+                        <div class="recipe-description">
+                            <h3>Classic Margherita Pizza (Italian)</h3>
+                            <p>Experience the rich taste of this classic dish with a modern twist. Join our class to
+                                explore
+                                unique flavors and presentation styles.</p>
+                            <a href="./recipes/signature-dish-1/index.html" class="cta-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-carousel-item">
+                        <img src="./images/Spicy Chickpea Tacos (Vegan).png" alt="Signature Dish 3">
+                        <div class="recipe-description">
+                            <h3>Spicy Chickpea Tacos (Vegan)</h3>
+                            <p>Learn how to create this mouth-watering dish with a few simple ingredients, perfect for
+                                any
+                                occasion.</p>
+                            <a href="./recipes/signature-dish-1/index.html" class="cta-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-carousel-item">
+                        <img src="./images/Garlic Butter Lobster Tail.png" alt="Signature Dish 1">
+                        <div class="recipe-description">
+                            <h3>Garlic Butter Lobster Tail</h3>
+                            <p>This delicious recipe is a perfect introduction to the art of fine cooking. Learn how to
+                                master
+                                flavors and techniques in just a few steps.</p>
+                            <a href="./recipes/signature-dish-1/index.html" class="cta-primary">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="card-carousel-item">
+                        <img src="./images/Spicy Chickpea Tacos (Vegan).png" alt="Signature Dish 3">
+                        <div class="recipe-description">
+                            <h3>Spicy Chickpea Tacos (Vegan)</h3>
+                            <p>Learn how to create this mouth-watering dish with a few simple ingredients, perfect for
+                                any
+                                occasion.</p>
+                            <a href="./recipes/signature-dish-1/index.html" class="cta-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-carousel-item">
+                        <img src="./images/Classic Margherita Pizza (Italian).png" alt="Signature Dish 2">
+                        <div class="recipe-description">
+                            <h3>Classic Margherita Pizza (Italian)</h3>
+                            <p>Experience the rich taste of this classic dish with a modern twist. Join our class to
+                                explore
+                                unique flavors and presentation styles.</p>
+                            <a href="./recipes/signature-dish-1/index.html" class="cta-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-carousel-item">
+                        <img src="./images/Classic Margherita Pizza (Italian).png" alt="Signature Dish 2">
+                        <div class="recipe-description">
+                            <h3>Classic Margherita Pizza (Italian)</h3>
+                            <p>Experience the rich taste of this classic dish with a modern twist. Join our class to
+                                explore
+                                unique flavors and presentation styles.</p>
+                            <a href="./recipes/signature-dish-1/index.html" class="cta-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev-button">&#8592; </button>
+            <button class="carousel-btn next-button"> &#8594;</button>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Guests Are Saying</h2>
+        <p>Our culinary experiences leave lasting impressions. Here’s what some of our guests have to say about their
+            time
+            with Chef Lisa.</p>
+        <div class="slider">
+            <div class="slides">
+                <article class="slide">
+                    <p>The Garlic Butter Lobster Tail class was amazing! Chef Lisa made it so easy to follow, and the
+                        result
+                        was delicious. Highly recommended!</p>
+                    <div class="testimonial-author" style="text-align: center;">
+                        <img src="./images/chef 1.jpg" height="50px" width="50px"
+                            style="border-radius: 50%; object-fit: cover;" alt="">
+                        <h4>James L.</h4>
+                        <h4 style="font-style: italic;">| Natgeo</h4>
+                    </div>
+                </article>
+                <article class="slide">
+                    <p>I attended the Classic Margherita Pizza class, and it was a game changer. Chef Lisa’s tips on
+                        perfecting the crust were invaluable!</p>
+                    <div class="testimonial-author">
+                        <img src="./images/chef 2.jpeg" height="50px" width="50px"
+                            style="border-radius: 50%; object-fit: cover;" alt="">
+                        <h4>Emily T.</h4>
+                        <h4 style="font-style: italic;">| Food Travel blogger</h4>
+                    </div>
+
+                </article>
+                <article class="slide">
+                    <p>The Vegan Spicy Chickpea Tacos workshop was fantastic! Chef Lisa created a welcoming environment
+                        and
+                        made cooking so much fun.</p>
+                    <div class="testimonial-author">
+                        <img src="./images/chef 3.jpeg" height="50px" width="50px"
+                            style="border-radius: 50%; object-fit: cover;" alt="">
+                        <h4>Chris B.</h4>
+                        <h4 style="font-style: italic;">| Traveller</h4>
+                    </div>
+                </article>
+            </div>
+            <button class="testimonial-prev">&#10094;</button>
+            <button class="testimonial-next">&#10095;</button>
+        </div>
+    </section>
+
+    <footer>
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#class-schedule">Classes</a> |
+            <a href="#recipes">Recipes</a> |
+            <a href="/contact">Contact</a>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.facebook.com/ChefLisa" target="_blank" class="social-icon">
+                <img src="./images/iconmonstr-facebook-6-240.png" height="20px" alt="" />
+            </a>
+            <a href="https://twitter.com/ChefLisa" target="_blank" class="social-icon">
+                <img src="./images/Twitter-X-App-Icon-PNG.png" height="20px" alt="" />
+            </a>
+            <a href="https://www.instagram.com/ChefLisa" target="_blank" class="social-icon">
+
+                <img src="./images/iconmonstr-instagram-13-240.png" height="20px" alt="" />
+            </a>
+        </div>
+        <p>&copy; 2024 Culinary Creations with Chef Lisa. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
